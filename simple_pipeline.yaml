@@ -1,0 +1,20 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: playbook-signing-pipeline
+spec:
+  tasks:
+  # 1. sign
+  - name: sign
+    taskRef:
+      name: sign
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: sign
+spec:
+  steps:
+  - name: sign
+    image: ghcr.io/hirokuni-kitahara/playbook-signer:simple
+    imagePullPolicy: Always
