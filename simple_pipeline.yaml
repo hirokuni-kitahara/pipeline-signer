@@ -1,18 +1,18 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: playbook-signing-pipeline
+  name: allin1-playbook-signing-pipeline
 spec:
   tasks:
   # 1. sign
   - name: sign
     taskRef:
-      name: sign
+      name: allin1-sign
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: sign
+  name: allin1-sign
 spec:
   steps:
   - name: sign

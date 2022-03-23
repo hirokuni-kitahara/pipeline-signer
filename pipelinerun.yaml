@@ -1,0 +1,8 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: allin1-playbook-signing-
+spec:
+  pipelineRef:
+    name: allin1-playbook-signing-pipeline
+ 
